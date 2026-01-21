@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/pwa-weather/static/js/main.7e5eebf3.js",
-    "index.html": "/pwa-weather/index.html",
-    "main.7e5eebf3.js.map": "/pwa-weather/static/js/main.7e5eebf3.js.map"
+    "main.js": "/pwa-weather_new/static/js/main.7e5eebf3.js",
+    "index.html": "/pwa-weather_new/index.html",
+    "main.7e5eebf3.js.map": "/pwa-weather_new/static/js/main.7e5eebf3.js.map"
   },
   "entrypoints": [
     "static/js/main.7e5eebf3.js"
