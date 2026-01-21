@@ -1,9 +1,7 @@
-const CACHE_NAME = "weather-app-v6";
-const urlsToCache = ["index.html", "offline.html"];
+const CACHE_NAME = "weather-app-v7";
+const urlsToCache = ["/pwa-weather/", "/pwa-weather/index.html", "/pwa-weather/offline.html"];
 
 const self = this;
-
-// install sw
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -14,20 +12,16 @@ self.addEventListener("install", (event) => {
   );
 });
 
-// listen for requests
-
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
         return cachedResponse;
       }
-      return fetch(event.request).catch(() => caches.match("offline.html"));
+      return fetch(event.request).catch(() => caches.match("/pwa-weather/offline.html"));
     }),
   );
 });
-
-// activate sw
 
 self.addEventListener("activate", (event) => {
   const cacheWhiteList = [];
