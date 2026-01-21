@@ -1,5 +1,5 @@
 const CACHE_NAME = "weather-app-v7";
-const urlsToCache = ["/pwa-weather/", "/pwa-weather/index.html", "/pwa-weather/offline.html"];
+const urlsToCache = ["/pwa-weather_new/", "/pwa-weather_new/index.html", "/pwa-weather_new/offline.html"];
 
 const self = this;
 
@@ -18,7 +18,7 @@ self.addEventListener("fetch", (event) => {
       if (cachedResponse) {
         return cachedResponse;
       }
-      return fetch(event.request).catch(() => caches.match("/pwa-weather/offline.html"));
+      return fetch(event.request).catch(() => caches.match("/pwa-weather_new/offline.html"));
     }),
   );
 });
